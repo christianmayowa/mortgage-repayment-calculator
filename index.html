@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+</head>
+<body>
+  <section>
+    <div class="box">
+      <!-- FORM -->
+      <div class="left">
+        <form action="">
+          <!-- The very top -->
+          <div class="top">
+            <h1 id="mortgage-text">Mortgage Calculator</h1>
+            <a href=""><p>Clear All</p></a>
+          </div>
+
+          <!-- FOR THE MORTGAGE AMOUNT START-->
+          <label for="">Mortgage Amount</label><br>
+
+          <div class="money">
+            <!-- THE SIGN -->
+            <div class="sign">
+              <p class="p-signs" id="pound"> &pound</p>
+            </div>
+            <input type="number">
+          </div>
+          <!-- ERROR MESSAGE -->
+          <div class="error"></div>
+          <!-- FOR THE MORTGAGE AMOUNT END-->
+          
+          <!-- MORTGAGE TERM AND INTEREST RATE STARTS THE TWO BESIDE EACHOTHER -->
+          <div class="term-interest">
+            
+            <div class="term">
+              <!-- FOR THE MORTGAGE TERM START-->
+              <label for="">Mortgage Term</label><br>
+
+              <div class="money">
+                <input type="number">
+                <!-- THE SIGN -->
+                <div class="sign" id="sign-years" style="padding: 10px; font-size: 18px;">
+                  <p class="p-signs">years</p>
+                </div>
+              </div>
+              <!-- ERROR MESSAGE -->
+              <div class="error"></div>
+              <!-- FOR THE MORTGAGE TERM END-->
+            </div>
+                
+            <div class="interest">
+              <!-- FOR THE INTEREST RATE START-->
+              <label for="">Interest Rate</label><br>
+
+              <div class="money">
+                <input type="number">
+                <!-- THE SIGN -->
+                <div class="sign" id="percent" style="padding: 10px 15px; font-size: 20px; width: fit-content !important;">
+                  <p class="p-signs">%</p>
+                </div>
+              </div>
+              <!-- ERROR MESSAGE -->
+              <div class="error"></div>
+              <!-- FOR THE INTEREST RATE END-->
+            </div>
+            
+          </div>
+          <!-- MORTGAGE TERM AND INTEREST RATE ENDS -->
+          <!-- MORTGAGE TYPE STARTS -->
+          <div class="type">
+            <label for="">Mortgage Type</label><br>
+            <div class="repay" onclick="change('rpy')">
+              <input type="radio" id="repayment" name="form">
+              <label for="repayment" style="cursor: pointer;">Repayment</label><br>
+            </div>
+
+            <div class="inte" onclick="change('int')">
+              <input type="radio" id="interest" name="form">
+              <label for="interest" style="cursor: pointer;">Interest Only</label>
+            </div>
+          </div>
+          <!-- ERROR MESSAGE -->
+          <div class="error"></div>
+          <!-- MORTGAGE TYPE ENDS -->
+          <!-- SUBMIT BUTTON -->
+          <input type="button" value="Calculate Repayment">
+        </form>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="right">
+        <div class="right-div" style="width: 80%; height: 40vh; margin: 150px 10%; text-align: center;">
+          <div class="img" style="width: 55%; margin: 0 auto; text-align: center;"><img src="illustration-empty.svg" alt="" srcset=""></div>
+          <h1 style="color: white !important;">Results shown here</h1><br>
+          <p style="color: rgba(255, 255, 255, 0.5) !important; line-height: 25px;">
+            Complete the form and click "Calculate Repayment" to see what your monthly repayments would be.
+          </p>
+          <div class="final"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,426 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: hsl(202, 55%, 16%);
+    font-family: Plus Jakarta Sans;
+    /* font-size: 15px; */
+}
+section{
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+    position: fixed;
+}
+.box{
+    width: 60%;
+    height: 80vh;
+    margin: 10vh auto;
+    border-radius: 20px;
+    display: flex;
+    background-color: white;
+}
+.left, .right{
+    width: 50%;
+    border-radius: 20px;
+    height: auto;
+}
+.right{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 100px;
+    background-color: hsl(202, 55%, 16%);
+}
+/* FORM STARTS */
+form{
+    margin: 30px;
+}
+input{
+    color: hsl(202, 55%, 16%);
+}
+input:hover{
+    cursor: pointer;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.money{
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    padding: 1px;
+    margin: 1vh 0;
+    border-radius: 5px;
+    /* margin: 10px 0; */
+    /* justify-content: space-evenly; */
+    /* border-radius: 10px; */
+    border-color: hsl(203, 41%, 72%);
+    background-color: hsl(203, 41%, 72%);
+    /* WHEN YOU CLICK */
+    /* border-color: hsl(61, 70%, 52%);
+    background-color: hsl(61, 70%, 52%);     */
+}
+.p-signs-two{
+    display: inline;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: hsl(61, 70%, 52%);
+    font-size: 50px;
+}
+.lime{
+    color: hsl(61, 70%, 52%);
+}
+.money div{
+    width: 10%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: hsl(202, 86%, 94%);
+}
+.money input{
+    width:90%;
+    height: auto;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#pound{
+    font-size: 25px;
+    padding: 10px;
+}
+.term-interest{
+    display: flex;
+    justify-content: space-between;
+    margin: 3vh 0;
+    align-items: center;
+}
+.term, .interest{
+    width: 48%;
+    margin: 1vh 0;
+}
+.term .sign, .interest .sign{
+    width: 30%;
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.term input, .interest input{
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* THE RADIO BUTTONS */
+.repay, .inte{
+    width: 95%;
+    height: 4vh;
+    background-color: transparent;
+    border: 2px solid hsl(202, 55%, 16%);
+    /* WHEN YOU CLICK */
+
+    /* background-color: hsla(61, 70%, 52%, 0.329);
+    border: 2px solid hsl(61, 70%, 52%); */
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px 10px;
+    position: relative;
+    /* border-color: hsl(61, 70%, 52%); */
+}
+.repay:hover, .inte:hover{
+    cursor: pointer;
+}
+.repay label, .inte label{
+    font-size: 18px;
+    padding: 2px 5px;
+    position: absolute;
+    font-weight: bold;
+}
+input[type= "radio"]{
+    border: 0px;
+    width: 10%;
+    height: 23px;
+    outline: transparent;
+    accent-color: hsl(61, 70%, 52%);
+}
+input[type= "button"]{
+    background-color: hsl(61, 70%, 52%);
+    border: 0;
+    width: 60%;
+    height: 7vh;
+    margin: 10px 0;
+    border-radius: 200px;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* FORM ENDS */
+
+
+/* RIGHT SIDE */
+/* .img{ */
+    /* width: 100%;
+    height: 50vh;
+    background-image: url(/assets/images/illustration-empty.svg); */
+/* } */
+.new-right-div{
+    text-align: left;
+}
+
+/* FINAL RESULT WHEN THE CALCUATE BUTTON IS PUSHED/CLICKED */
+
+.final-result{
+    width: 100%;
+    height: fit-content;
+    margin: 10px ;
+    border-radius: 10px;
+    /* position: fixed; */
+    padding-top: 3px;
+    background-color: hsl(61, 70%, 52%);
+    /* border-top-color: 10px solid hsl(61, 70%, 52%);; */
+    /* background-color: hsl(202, 55%, 16%); */
+}
+.inner-final{
+    width: calc(100% - 50px);
+    height: fit-content;
+    color: white !important;
+    border-radius: 10px;
+    padding: 25px;
+    /* border-top-color: 10px solid red; */
+    background-color: hsl(202, 55%, 10%);
+}
+.inner-final h1, .inner-final p, .inner-final h4{
+    color: white;
+}
+
+
+
+/* MEDIA QUERY STARTS */
+@media (max-width: 1250px) {
+    input[type = 'button']{
+        font-size: 15px;
+    }
+    .final{
+        width: 100% !important;
+        margin: 0 !important;
+        /* position: absolute;
+        left: 20%; */
+        height: fit-content !important;
+        background-color: hsl(202, 55%, 16%);
+    }
+    .right-div{
+        margin: 100px 10% !important;
+    }
+}
+@media (max-width: 1200px) {
+    #mortgage-text{
+        font-size: 20px !important;
+    }
+    input[type = 'button']{
+        font-size: 15px;
+    }
+}
+@media (max-width: 1100px) {
+    #mortgage-text{
+        font-size: 15px !important;
+    }
+    .top a p{
+        font-size: 13px !important;
+    }
+    input[type = 'button']{
+        font-size: 12px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 1000px) {
+    section{
+        width: 100%;
+        height: fit-content;
+        background-color: hsl(202, 55%, 16%);
+        position: relative;
+    }
+    .box{
+        width: 100%;
+        height: fit-content;
+        margin: 0vh;
+        border-radius: 0px;
+        display: block;
+        background-color: white;
+    }
+    .left, .right{
+        width: 100%;
+        height: fit-content;
+        padding-bottom: 30px;
+        /* margin: 0; */
+    }
+    .right{
+        height: fit-content;
+        border-radius: 0;
+        padding: 10px 0;
+        /* margin-top: -21vh; */
+    }
+    .final-result{
+        height: fit-content;
+        border-radius: 10px;
+    }
+    .inner-final{
+        height: fit-content;
+    }
+    #mortgage-text{
+        font-size: 15px !important;
+    }
+    .top a p{
+        font-size: 13px !important;
+    }
+    input[type = 'button']{
+        font-size: 12px;
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    #mortgage-text{
+        font-size: 20px !important; /**/
+    }
+    #pound{
+        font-size: 20px;
+        padding: 10px;
+    }
+    .top a p{ 
+        font-size: 15px !important; /**/
+        padding-top: 10px; /**/
+    }
+    .top{
+        display: block;
+        text-align: left; /**/
+    }
+    .repay label, .inte label{
+        font-size: 18px; /**/
+    }
+    input[type = 'button']{
+        font-size: 20px; /**/
+    }
+    .term-interest{
+        display: block; /**/
+    }
+    .term, .interest{
+        width: 100%;
+    }
+    #sign-years{
+        width: 10%;
+    }
+}
+
+@media (max-width: 400px) {
+    #mortgage-text{
+        font-size: 20px !important; /**/
+    }
+    .top a p{ 
+        font-size: 15px !important; /**/
+        padding-top: 10px; /**/
+    }
+    .top{
+        display: block;
+        text-align: left; /**/
+    }
+    #pound{
+        font-size: 20px;
+        padding: 0 10px;
+    }
+    .money .sign{
+        width: 15%;
+        padding: 8px 10px !important;
+    }
+    .sign p{
+        font-size: 15px;
+    }
+    input[type= "radio"]{
+        border: 0px;
+        width: 10%;
+        height: 20px;
+        outline: transparent;
+        accent-color: hsl(61, 70%, 52%);
+    }
+    .repay label, .inte label{
+        font-size: 17px; /**/
+    }
+    input[type = 'button']{
+        font-size: 18px; /**/
+    }
+    .final-result{
+        height: fit-content;
+        border-radius: 10px;
+    }
+    .inner-final{
+        height: fit-content;
+    }
+}
+
+@media (max-width: 350px) {
+    #mortgage-text{
+        font-size: 20px !important; /**/
+    }
+    .top a p{ 
+        font-size: 15px !important; /**/
+        padding-top: 10px; /**/
+    }
+    .top{
+        display: block;
+        text-align: left; /**/
+    }
+    .money .sign{
+        width: 8%;
+        padding: 8px 10px !important;
+    }
+    #pound{
+        font-size: 15px;
+        padding: 0 3px;
+    }
+    .sign p{
+        font-size: 12px;
+    }
+    input[type= "radio"]{
+        border: 0px;
+        width: 8%;
+        height: 17px;
+        outline: transparent;
+        accent-color: hsl(61, 70%, 52%);
+    }
+    .repay label, .inte label{
+        font-size: 15px; /**/
+    }
+    input[type = 'button']{
+        font-size: 18px; /**/
+    }
+    .right{
+        height: 80vh !important;
+    }
+    .right-div{
+        margin: 50px 10% !important;
+    }
+    .final-result{
+        height: fit-content;
+        border-radius: 10px;
+    }
+    .inner-final{
+        height: fit-content;
+    }
+}
+@media (min-width: 350px) {
+    .right-div{
+        height: 100vh;
+        margin: 100px 10% !important;
+    }
+    .final-result{
+        height: fit-content;
+        border-radius: 10px;
+    }
+    .inner-final{
+        height: fit-content;
+    }
+}
+/* MEDIA QUERY ENDS */
